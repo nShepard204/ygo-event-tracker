@@ -4,28 +4,6 @@
   padding: 2rem 1.5rem 4rem;
 }
 
-/* Account bar */
-
-.account-bar {
-  display: flex;
-  justify-content: flex-end;
-  min-height: 2.25rem;
-}
-
-.account-bar-login {
-  background: none;
-  border: none;
-  color: var(--color-primary);
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  padding: 0.35rem 0.5rem;
-}
-
-.account-bar-login:hover {
-  text-decoration: underline;
-}
-
 /* Header */
 
 .hero {

@@ -10,13 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@neondatabase/auth-ui": "^0.3.0-beta",
-    "@neondatabase/neon-js": "^0.7.0-beta",
     "axios": "^1.19.0",
     "dotenv": "^17.4.2",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "sonner": "^2.0.8"
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
