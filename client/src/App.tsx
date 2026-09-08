@@ -144,9 +144,9 @@ function App() {
       navigate={handleAuthNavigate}
       Link={AuthLink}
       account={false}
-      defaultTheme="light"
+      defaultTheme="dark"
     >
-      <Toaster theme="light" richColors />
+      <Toaster theme="dark" richColors />
       <div className="page">
         <div className="account-bar">
           <SignedIn>

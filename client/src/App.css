@@ -34,17 +34,26 @@
 }
 
 .hero-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 96px;
   height: 96px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px var(--color-surface), 0 0 24px rgba(45, 212, 232, 0.45);
+  box-shadow:
+    0 0 0 3px var(--color-surface),
+    0 0 24px rgba(45, 212, 232, 0.45);
 }
 
 .hero h1 {
   margin: 0.75rem 0 0.25rem;
   font-size: 2.25rem;
-  background: linear-gradient(120deg, var(--color-primary), var(--color-accent));
+  background: linear-gradient(
+    120deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
