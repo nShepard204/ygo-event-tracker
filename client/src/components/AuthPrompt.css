@@ -19,6 +19,10 @@
   max-width: 24rem;
 }
 
+.auth-card {
+  box-shadow: 0 4px 16px rgba(45, 212, 232, 0.1);
+}
+
 .auth-skip {
   background: none;
   border: none;
