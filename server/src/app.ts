@@ -6,6 +6,7 @@ import express, {
 } from 'express';
 import { AppDataSource } from './db/data-source.ts';
 import events from './routes/events.ts';
+import tasks from './routes/tasks.ts';
 
 const app: Express = express();
 
@@ -31,6 +32,7 @@ app.use(async (req: Request, res: Response, next: NextFunction) => {
 });
 
 app.use('/events', events);
+app.use('/tasks', tasks);
 
 app.get('/', async (req: Request, res: Response) => {
   try {

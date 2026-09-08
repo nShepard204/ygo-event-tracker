@@ -31,4 +31,15 @@ export class VenueService {
     const result = await venueRepository.delete(id);
     return (result.affected ?? 0) > 0;
   }
+
+  static async upsertScrapedVenue(
+    data: DeepPartial<Venue>
+  ): Promise<Venue | null> {
+    const existingVenue = await this.getVenueByName(data.name ?? '');
+    if (existingVenue !== null) {
+      return await this.updateVenue(existingVenue.id, data);
+    } else {
+      return await this.createVenue(data);
+    }
+  }
 }
