@@ -14,6 +14,18 @@ export class EventService {
     });
   }
 
+  static async getEventByHeuristic(
+    data: DeepPartial<Event>
+  ): Promise<Event | null> {
+    return await eventRepository.findOne({
+      where: {
+        venueId: data.venueId,
+        hostId: data.hostId,
+        date: data.date!,
+      },
+    });
+  }
+
   static async getAllEvents(): Promise<Event[]> {
     return await eventRepository.find({
       relations: { venue: true, host: true },
@@ -31,5 +43,16 @@ export class EventService {
   static async deleteEvent(id: number): Promise<boolean> {
     const result = await eventRepository.delete(id);
     return (result.affected ?? 0) > 0;
+  }
+
+  static async upsertScrapedEvent(
+    data: DeepPartial<Event>
+  ): Promise<Event | null> {
+    const existingEvent = await this.getEventByHeuristic(data);
+    if (existingEvent !== null) {
+      return await this.updateEvent(existingEvent.id, data);
+    } else {
+      return await this.createEvent(data);
+    }
   }
 }

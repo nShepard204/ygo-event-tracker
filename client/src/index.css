@@ -1,14 +1,40 @@
 :root {
-  color-scheme: light;
-  --color-primary: #7e14ff;
-  --color-primary-dark: #5e0fc2;
-  --color-accent: #47bfff;
-  --color-tint: #ede6ff;
-  --color-bg: #f8f7fc;
-  --color-surface: #ffffff;
-  --color-border: #e1d9f7;
-  --color-text: #221a33;
-  --color-text-muted: #6b6380;
+  color-scheme: dark;
+  --color-primary: #2dd4e8;
+  --color-primary-dark: #12a3b8;
+  --color-accent: #d9a25c;
+  --color-tint: #16233a;
+  --color-bg: #0b1220;
+  --color-surface: #121c30;
+  --color-border: #223049;
+  --color-text: #eef3f8;
+  --color-text-muted: #8fa0b8;
+
+  /* @neondatabase/auth-ui theme tokens, tied directly to the palette above
+     so the login popup always tracks the app's actual theme instead of a
+     separately hand-tuned copy of it. */
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text);
+  --primary: var(--color-primary);
+  --primary-foreground: #04141a;
+  --secondary: var(--color-tint);
+  --secondary-foreground: var(--color-text);
+  --muted: var(--color-tint);
+  --muted-foreground: var(--color-text-muted);
+  --accent: var(--color-tint);
+  --accent-foreground: var(--color-text);
+  --destructive: #f2545b;
+  --destructive-foreground: #04141a;
+  --border: var(--color-border);
+  --input: var(--color-border);
+  --ring: var(--color-primary);
+  --radius: 0.75rem;
+  --font-sans:
+    "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
 }
 
 * {

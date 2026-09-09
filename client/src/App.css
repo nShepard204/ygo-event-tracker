@@ -12,15 +12,26 @@
 }
 
 .hero-logo {
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3px var(--color-surface),
+    0 0 24px rgba(45, 212, 232, 0.45);
 }
 
 .hero h1 {
-  margin: 0.5rem 0 0.25rem;
+  margin: 0.75rem 0 0.25rem;
   font-size: 2.25rem;
-  background: linear-gradient(120deg, var(--color-primary-dark), var(--color-accent));
+  background: linear-gradient(
+    120deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -42,7 +53,7 @@
   border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 1.25rem;
-  box-shadow: 0 4px 16px rgba(126, 20, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(45, 212, 232, 0.1);
 }
 
 .field {
@@ -72,7 +83,7 @@
 .field select:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(126, 20, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(45, 212, 232, 0.2);
 }
 
 .search-button {
@@ -84,7 +95,7 @@
   border: none;
   border-radius: 8px;
   background: var(--color-primary);
-  color: white;
+  color: #04141a;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -94,8 +105,8 @@
 .spinner {
   width: 1.1rem;
   height: 1.1rem;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  border-top-color: white;
+  border: 2px solid rgba(4, 20, 26, 0.35);
+  border-top-color: #04141a;
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
 }
@@ -126,7 +137,7 @@
 
 .search-button.loading:disabled {
   background: var(--color-primary);
-  color: white;
+  color: #04141a;
   cursor: default;
 }
 
@@ -153,7 +164,7 @@
   border: 1px solid var(--color-border);
   border-radius: 12px;
   overflow-x: auto;
-  box-shadow: 0 4px 16px rgba(126, 20, 255, 0.06);
+  box-shadow: 0 4px 16px rgba(45, 212, 232, 0.08);
 }
 
 table {
@@ -197,8 +208,8 @@ tbody tr:hover {
 }
 
 .badge-yes {
-  background: rgba(71, 191, 255, 0.15);
-  color: #0a7cb8;
+  background: rgba(45, 212, 232, 0.15);
+  color: var(--color-primary);
 }
 
 .badge-no {
