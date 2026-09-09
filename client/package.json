@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@neondatabase/auth-ui": "^0.3.0-beta",
+    "@neondatabase/neon-js": "^0.7.0-beta",
     "axios": "^1.19.0",
     "dotenv": "^17.4.2",
+    "neondatabase": "^0.0.1-security",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
