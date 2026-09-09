@@ -1,3 +1,5 @@
+@import "@neondatabase/auth-ui/css";
+
 :root {
   color-scheme: dark;
   --color-primary: #2dd4e8;
